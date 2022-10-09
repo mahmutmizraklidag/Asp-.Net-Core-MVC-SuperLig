@@ -1,0 +1,16 @@
+﻿@model League
+
+<div class="col">
+    <div class="card shadow-sm">
+        <a href="/Posts/Detail/@Model.Id">
+            <img src="/img/@Model.Image" alt="@Model.Name" title="@Model.Name" class="w-100" height="400" />
+        </a>
+        <div class="card-body">
+            <p class="card-text">@Model.Name</p>
+            <div class="d-flex justify-content-between align-items-center">
+
+                <small class="text-muted">@String.Format("{0:d}",Model.CreateDate) </small>
+            </div>
+        </div>
+    </div>
+</div>

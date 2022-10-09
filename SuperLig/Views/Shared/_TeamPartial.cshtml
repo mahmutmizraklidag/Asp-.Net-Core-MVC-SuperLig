@@ -1,0 +1,22 @@
+﻿@model Team
+
+<div class="col">
+    <div class="card shadow-sm">
+        <a href="/Teams/Detail/@Model.Id">
+            <img src="/img/@Model.Image" alt="@Model.Name" title="@Model.Name" class="w-100" height="400"   />
+        </a>
+        
+        <div class="card-body">
+            <hr />
+            <h3 class="card-text text-center">@Model.Name</h3>
+            <br />
+            <div class="d-flex justify-content-between align-items-center">
+
+                <small class="text-muted"><h6>Kuruluş Tarihi : @String.Format("{0:d}",Model.CreateDate)</h6> </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

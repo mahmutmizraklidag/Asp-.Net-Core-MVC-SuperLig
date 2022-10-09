@@ -1,0 +1,38 @@
+﻿@model Team
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            @foreach (Player item in Model.Players)
+            {
+                <div class="col">
+                    <div class="card shadow-sm">
+                        
+                            <img src="/img/@item.Image" alt="@item.Name" title="@Model.Name" class="w-100" height="400" />
+                       
+                        <div class="card-body">
+                            <h6 class="card-text">@item.Name @item.Surname</h6>
+                            <hr />
+                            <p>Doğum Tarihi : @String.Format("{0:d}",item.Birth)</p>
+                            <p>Boyu : @item.Size</p>
+                            <p>Kullandığı Ayak : @item.Foot</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</div>
+
